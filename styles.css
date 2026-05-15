@@ -297,6 +297,7 @@ h3 {
 }
 
 .service-card,
+.partner-panel,
 .case-list article,
 .timeline article {
   border: 1px solid var(--line);
@@ -325,10 +326,61 @@ h3 {
 }
 
 .service-card p,
+.partner-copy p,
 .case-list p,
 .timeline p {
   margin: 14px 0 0;
   color: var(--muted);
+}
+
+.support {
+  background: var(--paper);
+}
+
+.partner-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(320px, 1fr);
+  gap: 34px;
+  align-items: center;
+  margin-top: 42px;
+  padding: 28px;
+}
+
+.partner-logo {
+  display: grid;
+  place-items: center;
+  min-height: 230px;
+  padding: 28px;
+  background: #f6f8f5;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.partner-logo img {
+  width: min(100%, 260px);
+  height: auto;
+}
+
+.partner-label {
+  display: inline-flex;
+  margin: 0 0 12px;
+  color: var(--teal-dark);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.partner-copy h3 {
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 22px;
+  color: var(--teal-dark);
+  font-weight: 800;
+  border-bottom: 2px solid rgba(47, 120, 111, 0.26);
 }
 
 .process {
@@ -446,6 +498,7 @@ textarea:focus {
   }
 
   .case-list,
+  .partner-panel,
   .intro,
   .contact {
     grid-template-columns: 1fr;
@@ -527,6 +580,14 @@ textarea:focus {
   .service-card,
   .timeline article {
     min-height: auto;
+  }
+
+  .partner-panel {
+    padding: 20px;
+  }
+
+  .partner-logo {
+    min-height: 180px;
   }
 
   .site-footer {
